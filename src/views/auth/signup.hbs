@@ -1,0 +1,67 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+          <h3>Registrarse</h3></div>
+        <div class="card-body">
+          <section class="hero is-success is-fullheight">
+            <div class="hero-body">
+              <div class="container has-text-center">
+                <div class="column is-4 is-offset-4">
+                  <p class="subtitle has-text-grey">Por favor registrate para continuar.</p>
+                  <div class="box">
+                    <figure class="avatar">
+                      <img
+                        src="/img/fondo2.png" alt="Logo Marketplace" width="250" height="220"/>
+                    </figure>
+                    <form action="/signup" method="POST">
+                      <div class="form-group">
+                        <input type="text" name="fullname" placeholder="Nombre Completo" class="form-control" autofocus required>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="email" name="email" placeholder="Correo electronico" class="form-control" required oninvalid="setCustomValidity('Ingrese un formato de correo valido')" oninput="setCustomValidity('')">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="password" name="password" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9]*[0-9][A-Za-z0-9]*" required oninvalid="setCustomValidity('Solo valores alfanumericos')" oninput="setCustomValidity('')">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="password" name="confirmation" placeholder="Confirme su Contraseña" class="form-control" pattern="[A-Za-z0-9]*[0-9][A-Za-z0-9]*" required>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" name="phone" placeholder="Telefono" class="form-control" pattern= "^[0-9,$]*$" required oninvalid="setCustomValidity('Solo valores numericos')" oninput="setCustomValidity('')">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" name="department" placeholder="Departamento" class="form-control" required>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" name="town" placeholder="Municipio" class="form-control" required>
+                      </div>
+
+                      <div class="form-group">
+                        <button class="btn btn-success btn-block">
+                          Registrarse
+                        </button>
+                      </form>
+                    </div>
+                    <p class="has-text-grey">
+                      <label class="label">¿Ya tienes una cuenta?
+                        <a class="is-info" style="color:blue"
+                          href="/signin"><i>Iniciar Sesion</i></a></label>
+                      <a href="../">¿Necesitas ayuda?</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,46 @@
+<div class="container-fluid">
+        <div class="row">
+        {{#each searchSeedsLog}}
+        <div class="col-md-3">
+            <div class="card mt-5 ml-5 text-center mt-5 ml-5">
+                <div class="media-left canBeDelited mt-5">
+                    <figure class="avatar">
+                        <img src="/img/fondo3.jpg" alt="Image" class="canBeDelited" width="150" height="100"  align="center"/>
+                    </figure>
+                </div>
+                <div class="media-content canBeDelited ml-5 mr-5">
+                    <p class="canBeDelited">
+                        <span class="title canBeDelited"><b>Nombre:</b>
+                            {{name}}
+                        </span>
+                    </p>
+                    <p class="canBeDelited">
+                        <span class="title canBeDelited has-text-black is-6"><b>Precio (Kg):</b>
+                            {{priceKg}}
+                        </span>
+                    </p>
+                    <p class="canBeDelited">
+                        <span class="title canBeDelited has-text-black is-6"><b>Cantidad disponible (Kg):</b>
+                        {{quantityAvailable}}
+                        </span>
+                    </p>
+                    <p class="canBeDelited">
+                        <span class="title canBeDelited has-text-black is-6"><b>Descripcion:</b>
+                        {{description}}
+                        </span>
+                    </p>
+                    <a href="seeds/singleItem/{{idSeed}}" class="btn btn-primary mb-3">Ver</a>
+                    <a href="/seeds/edit/{{idSeed}}" class="btn btn-primary mb-3">Editar</a>
+                    <a href="/seeds/delete/{{idSeed}}" class="btn btn-danger mb-3">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+         <div class="col-md-4 mx-auto mt-3">
+            <div class="card card-body text-center">
+                <p>No has publicado un producto con este nombre</p>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</div>

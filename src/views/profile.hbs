@@ -1,0 +1,56 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col -md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>Bienvenido {{user.fullname}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container p-4", style="margin-top: 10px;">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+          <h3>Datos Usuario</h3></div>
+        <div class="card-body">
+          <section class="hero is-success is-fullheight">
+            <div class="hero-body">
+              <div class="container has-text-center">
+                <div class="column is-4 is-offset-4">
+                  <div class="box">
+                    <figure class="avatar", style="margin-bottom: 30px ;">
+                      <img
+                        src="/img/fondoUsuario.jpg" alt="Fondo user" width="250" height="220"/>
+                    </figure>
+                    <div class="form-group", style="text-align: left;">
+                        <p id="name" class="title is-2"><b>Nombre:</b> {{user.fullname}}</p>
+                      </div>
+
+                      <div class="form-group", style="text-align: left;">
+                        <p id="email" class="title is-2"><b>Correo:</b> {{user.email}}</p>
+                      </div>
+
+                      <div class="form-group", style="text-align: left;">
+                        <p id="phone" class="title is-2"><b>Telefono:</b> {{user.phone}}</p>
+                      </div>
+
+                      <div class="form-group" , style="text-align: left;">
+                        <p id="department" class="title is-2"><b>Departamento:</b> {{user.department}}</p>
+                      </div>
+
+                      <div class="form-group" , style="text-align: left;">
+                        <p id="town" class="title is-2"><b>Municipio:</b> {{user.town}}</p>
+                      </div>
+                </div>
+                </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
