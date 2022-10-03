@@ -31,10 +31,7 @@ passport.use('local.signup', new LocalStrategy({
 
 }, async (req, fullname, password, done) => {
     const { email } = req.body;
-    const { phone } = req.body;
     const { confirmation } = req.body;
-    const { department } = req.body;
-    const { town } = req.body;
 
     await pool.query("SELECT email FROM users", async function (err, mails, fields) {
         if (err) throw err;
@@ -47,7 +44,7 @@ passport.use('local.signup', new LocalStrategy({
                 done(null, false, req.flash('message', 'Las contraseñas no coinciden'));
             }
             else {
-                const newUser = { fullname, email, password, phone, department, town };
+                const newUser = { fullname, email, password};
                 newUser.password = await helpers.encryptPassword(password);
 
                 const result = await pool.query('INSERT INTO users SET ?', [newUser]);

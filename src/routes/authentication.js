@@ -22,18 +22,6 @@ router.get('/signup', isNotLoggedIn, (req, res) =>{
   res.render('auth/signup');
 });
 
-router.get('/searchLog',isLoggedIn, async (req, res) =>{
-  let {name} = req.query;
-  const searchSeedsLog = await pool.query('SELECT * FROM seed WHERE name = ? AND idUser = ?', [name, req.user.idUser]);
-  res.render('auth/searchLog', {searchSeedsLog});
-});
-
-router.get('/search', isNotLoggedIn, async (req, res) =>{
-  let {name} = req.query;
-  const searchSeeds = await pool.query('SELECT * FROM seed WHERE name = ?', [name]);
-  res.render('auth/search', {searchSeeds});
-});
-
 router.post('/signup', isNotLoggedIn, passport.authenticate('local.signup', {
   successRedirect: '/profile',
   failureRedirect: '/signup',
